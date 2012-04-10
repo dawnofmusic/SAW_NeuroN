@@ -2,6 +2,8 @@ SAW NeuroN
 ==========
 About this project
 ------------------
+This tools allows playful experiences with neuronal networks. 
+In this case especially backpropagation networks. 
 
 This project has been developed using the Eclipse IDE (http://www.eclipse.org).
 
