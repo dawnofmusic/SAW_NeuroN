@@ -42,7 +42,7 @@ public class NNSimula {
 	Logger.getRootLogger().setLevel(Level.WARN);
 
 	System.instance.setPatternToBeTrained(Patterns.EXAMPLE_PATTERNS[0]);
-	System.instance.setNet(Net.createNet(2, 1, 12, 1));
+	System.instance.setNet(Net.createNet(2, 1, 32, 1));
 
 	JFrame jFrame = new JFrame("NNSimula 2012");
 	jFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);

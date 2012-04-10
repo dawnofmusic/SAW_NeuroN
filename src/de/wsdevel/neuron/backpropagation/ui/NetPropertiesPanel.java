@@ -85,16 +85,49 @@ public class NetPropertiesPanel extends JPanel {
 	add(new JLabel("Max. learn rate"), new GBC().pos(0, 1).anchorEast());
 	this.maxLearnRateSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 1,
 		0.01));
+	this.maxLearnRateSpinner.addChangeListener(new ChangeListener() {
+	    @Override
+	    public void stateChanged(ChangeEvent e) {
+		SpinnerModel model2 = maxLearnRateSpinner.getModel();
+		if (model2 instanceof SpinnerNumberModel) {
+		    getModel().setMaxLearningRate(
+			    ((SpinnerNumberModel) model2).getNumber()
+				    .doubleValue());
+		}
+	    }
+	});
 	add(this.maxLearnRateSpinner, new GBC().pos(1, 1).fillHorizontal(1));
 
 	add(new JLabel("Min. learn rate"), new GBC().pos(0, 2).anchorEast());
 	this.minLearnRateSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 1,
 		0.01));
+	this.minLearnRateSpinner.addChangeListener(new ChangeListener() {
+	    @Override
+	    public void stateChanged(ChangeEvent e) {
+		SpinnerModel model2 = minLearnRateSpinner.getModel();
+		if (model2 instanceof SpinnerNumberModel) {
+		    getModel().setMinLearningRate(
+			    ((SpinnerNumberModel) model2).getNumber()
+				    .doubleValue());
+		}
+	    }
+	});
 	add(this.minLearnRateSpinner, new GBC().pos(1, 2).fillHorizontal(1));
 
 	add(new JLabel("Gradient"), new GBC().pos(0, 3).anchorEast());
 	this.gradientSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 10,
 		0.1));
+	this.gradientSpinner.addChangeListener(new ChangeListener() {
+	    @Override
+	    public void stateChanged(ChangeEvent e) {
+		SpinnerModel model2 = gradientSpinner.getModel();
+		if (model2 instanceof SpinnerNumberModel) {
+		    getModel().setGradient(
+			    ((SpinnerNumberModel) model2).getNumber()
+				    .doubleValue());
+		}
+	    }
+	});
 	add(this.gradientSpinner, new GBC().pos(1, 3).fillHorizontal(1));
     }
 
