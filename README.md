@@ -11,7 +11,7 @@ Author
 ------
 (c) 2012 Sebastian A. Weiﬂ - post@sebastian-weiss.de
 
-Reused parts from "Darmst‰dter Neuronale-Netze-Simulator" created by 
+Reused ideas and code from "Darmst‰dter Neuronale-Netze-Simulator" created by 
 Markus Seeger and Sebastian A. Weiﬂ in 1994-1996.
 
 Depends on the following libraries/projects
